@@ -19,8 +19,8 @@ fn main() {
     mv.set_s(250.0);
     println!("{:?}", mv);
 
-    let call = european::European::new(OptionType::Call, 250.0, 0.1);
-    let put = european::European::new(OptionType::Put, 260.0, 0.2);
+    let call = european::European::new(&OptionType::Call, 250.0, 0.1);
+    let put = european::European::new(&OptionType::Put, 260.0, 0.2);
 
     println!("call payoff = {:?}", call.get_payoff(&mv));
     println!("put payoff = {:?}", put.get_payoff(&mv));
